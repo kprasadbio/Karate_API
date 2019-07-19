@@ -1,9 +1,7 @@
-Feature: Verify Post Request
+Feature: Verify Delete Request
 
-Scenario: Create user 
+Scenario: Delete user 
 
-    Given url 'https://reqres.in/api/users' 
-    And request {	"name": "Prasad","job": "QE"}
-	When method post
-	Then status 201
-	Then match $ contains {name:"Prasad"} 
+    Given url 'https://reqres.in/api/users/2'
+	When method DELETE
+	Then status 204 

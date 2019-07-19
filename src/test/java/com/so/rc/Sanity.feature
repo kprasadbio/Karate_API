@@ -2,18 +2,21 @@ Feature: Test User API
 
 	# Background:
 	  # * url 'https://reqres.in'
+	 # * url baseUrl
+	  #* def url: ''
   
  Scenario: fetch the users
  #*def baseURL='https://reqres.in'
   
-    #Given path  baseURL+'/api/users/2'
-    Given url 'https://reqres.in/api/users'
+    #Given path   '/api/users/2'
+    Given url 'https://reqres.in/api/users' 
     When method GET
     Then status 200 
-    Then print response[0].id==2
+    Then print response[0].id==2 
     
     
- Scenario: fetch the users 
+    
+ Scenario: duplicate fetch the users 
   
     #Given path  baseURL+'/api/users/2'
     Given url 'https://reqres.in/api/users'

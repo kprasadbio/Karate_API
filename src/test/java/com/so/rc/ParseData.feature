@@ -1,6 +1,7 @@
 Feature: Test User API
 
 	#Background: url baseUrl
+	#*url 'https://reqres.in'
   
   
  Scenario: delete use and check 204
@@ -9,6 +10,6 @@ Feature: Test User API
 	 Then print baseUrl
 	 When method DELETE
 	 Then status 204
-	 And print baseUrl
+	 And print 'print value'+baseUrl
  
      
