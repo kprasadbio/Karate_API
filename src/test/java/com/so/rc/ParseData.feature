@@ -10,4 +10,4 @@ Scenario: Duplicate scdnario
     When method GET
     Then status 200 
     Then print 'print config details:' baseUrl response[0].id==2  
-    * print 'URL:' baseUrl
+    * print 'URL:', baseUrl
